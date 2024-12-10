@@ -1,0 +1,266 @@
+/* App.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navColor{
+ 
+}
+.home{
+}
+.cardsContainer{
+  background-color: #e2c6ca;
+  display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      max-width: 1200px;
+      padding: 20px;
+}
+.card{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* background: #fff; */
+      background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+      width: calc(25% - 20px); /* Divide width into 3 columns */
+      min-width: 300px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+}
+
+.card h3 {
+  font-size: 1.5rem; /* Larger title */
+  margin: 10px 0;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+}
+
+.card p {
+  font-size: 1rem; /* Regular paragraph size */
+  margin: 10px 20px;
+  color: #555; /* Softer text color */
+  font-family: 'Poppins', sans-serif;
+}
+.cardImg{
+  border-radius: 5px;
+  /* max-width:260px; */
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+
+}
+.card button {
+  background-color: #ff7f50; /* Coral button color */
+  color: #fff; /* White text */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.card button:hover {
+  background-color: #ff6347; /* Darker coral on hover */
+}
+@media (max-width: 768px) {
+  .card {
+    width: calc(50% - 20px); /* Adjust to 2 cards in smaller screens */
+  }
+}
+
+@media (max-width: 500px) {
+  .card {
+    width: 100%; /* Adjust to 1 card in very small screens */
+  }
+}
+.footer{
+  width: 100%;
+  height: fit-content;
+  background-color: #934133;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0px;
+  /* align-items: center; */
+  color: white;
+  font-family: serif;
+
+}
+.footer a{
+  text-decoration: none;
+  color: inherit; 
+  transition: 0.5s;
+}
+.footer a:hover{
+  color: black;
+  font-size: 18px;
+}
+.footer li{
+  list-style-type: none;
+}
+.footer input{
+  border: none;
+  /* width: 50%px; */
+  border-radius: 5px;
+  height: 35px;
+}
+.footer button{
+  padding: 5px 10px;
+  border: none;
+  margin-top:10px ;
+  border-radius: 5px;
+}
+.footer button:hover{
+  background-color: #d12a10;
+  border: 1px solid rgb(44, 15, 10);
+  color: white;
+}
+.footerSection{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+.footerRule{
+  background-color: #7c382c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+@media (max-width:768px) {
+  .footer{
+    display: flex;
+    flex-direction: column;
+  }
+  .footerHide{
+    display: none;
+  }
+}
+.contact{
+  background-image: url('/public/ContactBg.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 90vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+ 
+}
+
+.ContactForm{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.ContactForm input{
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 14px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  outline: none;
+  transition: box-shadow 0.3s ease, border 0.3s ease;
+  margin-bottom: 15px;
+
+}
+.ContactForm textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 14px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  resize: none; /* Disable resizing if preferred */
+  outline: none;
+  transition: box-shadow 0.3s ease, border 0.3s ease;
+}
+
+.ContactForm textarea:focus {
+  border: 1px solid #007BFF;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+.inputbox{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  /* gap: 15px; */
+}
+.emailPhn{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.CantactDesc{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.contactIcon{
+  display: flex;
+  justify-content: flex-start;
+  text-align: center;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .contact {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 370px;
+      gap: 40px;
+  }
+}
+
+.placeDetails{
+  display: flex;
+  gap: 20px;
+  width: calc(80% - 50px);
+  /* justify-content: space-around; */
+  align-items: center;
+  height: fit-content;
+  margin: auto;
+  margin-top: 30px;
+  /* background-color: #555; */
+}
+.placeImg{
+  width: 100%;
+  
+}
+.imgTitle{
+ display: flex;
+ flex-direction: column;
+ /* background-color: #7c382c; */
+ align-items: center;
+}
+
+.imgTitle img{
+  width: 80%;
+  border-radius: 10px;
+}
+.description{
+ width: fit-content;
+ height: fit-content;
+ /* background-color: #007BFF; */
+}
+@media (max-width: 768px) {
+  .placeDetails {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 100px;
+      gap: 40px;
+  }
+}
